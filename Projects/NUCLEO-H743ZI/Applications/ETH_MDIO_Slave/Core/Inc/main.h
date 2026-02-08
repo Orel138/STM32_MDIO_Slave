@@ -43,7 +43,8 @@ extern "C" {
 /* USER CODE BEGIN EC */
 extern TIM_HandleTypeDef htim6;
 extern MDIOS_HandleTypeDef hmdios;
-extern ETH_HandleTypeDef heth;
+extern UART_HandleTypeDef huart3;
+extern RNG_HandleTypeDef hrng;
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
@@ -55,6 +56,7 @@ extern ETH_HandleTypeDef heth;
 void Error_Handler(void);
 void MX_USART3_UART_Init(void);
 void MX_RNG_Init(void);
+void MX_MDIOS_Init(void);
 
 /* USER CODE BEGIN EFP */
 

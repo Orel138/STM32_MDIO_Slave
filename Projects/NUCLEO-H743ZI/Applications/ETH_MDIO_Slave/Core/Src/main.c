@@ -63,7 +63,6 @@ static uint16_t phy_regs[PHY_REG_COUNT];
 void SystemClock_Config(void);
 static void MPU_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_MDIOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -236,7 +235,7 @@ void SystemClock_Config(void)
   * @param None
   * @retval None
   */
-static void MX_MDIOS_Init(void)
+void MX_MDIOS_Init(void)
 {
 
   /* USER CODE BEGIN MDIOS_Init 0 */
@@ -254,6 +253,9 @@ static void MX_MDIOS_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN MDIOS_Init 2 */
+
+  // Enable READ / WRITE / ERROR interrupts
+  HAL_MDIOS_EnableEvents(&hmdios);
 
   /* USER CODE END MDIOS_Init 2 */
 

@@ -49,24 +49,24 @@ static void vCommand_MDIO( ConsoleIO_t * pxCIO,
                            char * ppcArgv[] );
 
 /* Helper: convert 16-bit value to binary string (16 chars + nul) */
-static void uint16_to_binary(uint16_t value, char *buf)
-{
-    for (int i = 15; i >= 0; --i)
-    {
-        buf[15 - i] = (value & (1u << i)) ? '1' : '0';
-    }
-    buf[16] = '\0';
-}
+//static void uint16_to_binary(uint16_t value, char *buf)
+//{
+//    for (int i = 15; i >= 0; --i)
+//    {
+//        buf[15 - i] = (value & (1u << i)) ? '1' : '0';
+//    }
+//    buf[16] = '\0';
+//}
 
 /* CLI command definition */
 const CLI_Command_Definition_t xCommandDef_mdio =
 {
     .pcCommand            = "mdios",
     .pcHelpString         =
-        "mdios:\r\n"
+        "mdios\r\n"
         "    Perform MDIO Slave.\r\n"
         "    Usage:\r\n"
-        "    mdio write <PHYAddress> <PHY_Reg> <Reg_value>\r\n"
+        "    mdio write <PHYAddress> <PHY_Reg> <Reg_value>\r\n",
     .pxCommandInterpreter = vCommand_MDIO
 };
 

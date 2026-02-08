@@ -260,6 +260,9 @@ static void MX_MDIOS_Init(void)
   }
   /* USER CODE BEGIN MDIOS_Init 2 */
 
+  // Enable READ / WRITE / ERROR interrupts
+  HAL_MDIOS_EnableEvents(&hmdios);
+
   /* USER CODE END MDIOS_Init 2 */
 
 }

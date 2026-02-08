@@ -43,7 +43,8 @@ extern "C" {
 /* USER CODE BEGIN EC */
 extern TIM_HandleTypeDef htim6;
 extern MDIOS_HandleTypeDef hmdios;
-extern ETH_HandleTypeDef heth;
+extern UART_HandleTypeDef huart3;
+extern RNG_HandleTypeDef hrng;
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
